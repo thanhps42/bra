@@ -31,7 +31,7 @@ import (
 	"github.com/urfave/cli"
 	"gopkg.in/fsnotify/fsnotify.v1"
 
-	"github.com/Unknwon/bra/modules/setting"
+	"github.com/thanhps42/bra/modules/setting"
 )
 
 var (
@@ -122,6 +122,9 @@ func notify(cmds []*runCommand) {
 		command.Env = cmd.Envs
 		command.Stdout = os.Stdout
 		command.Stderr = os.Stderr
+		if setting.Cfg.Run.Dir != "" {
+			command.Dir = setting.Cfg.Run.Dir
+		}
 		if err := command.Start(); err != nil {
 			log.Error("Fail to start command: %v - %v", cmd, err)
 			fmt.Print("\x07")

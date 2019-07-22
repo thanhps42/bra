@@ -17,7 +17,7 @@ import (
 	"github.com/Unknwon/log"
 	"github.com/urfave/cli"
 
-	"github.com/Unknwon/bra/modules/setting"
+	"github.com/thanhps42/bra/modules/setting"
 )
 
 var AppVer string

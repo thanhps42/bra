@@ -36,8 +36,7 @@ var (
 
 var Cfg struct {
 	Run struct {
-		InitCmds         [][]string       `toml:"init_cmds"`
-		Dir              string           `toml:"dir"`
+		Dir              []string         `toml:"dir"`
 		WatchAll         bool             `toml:"watch_all"`
 		WatchDirs        []string         `toml:"watch_dirs"`
 		WatchExts        []string         `toml:"watch_exts"`

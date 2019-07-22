@@ -117,13 +117,13 @@ func notify(cmds []*runCommand) {
 		runningLock.Unlock()
 	}()
 
-	for _, cmd := range cmds {
+	for i, cmd := range cmds {
 		command := exec.Command(cmd.Name, cmd.Args...)
 		command.Env = cmd.Envs
 		command.Stdout = os.Stdout
 		command.Stderr = os.Stderr
-		if setting.Cfg.Run.Dir != "" {
-			command.Dir = setting.Cfg.Run.Dir
+		if len(cmds) <= len(setting.Cfg.Run.Dir) && setting.Cfg.Run.Dir[i] != "" {
+			command.Dir = setting.Cfg.Run.Dir[i]
 		}
 		if err := command.Start(); err != nil {
 			log.Error("Fail to start command: %v - %v", cmd, err)
@@ -195,7 +195,7 @@ func runRun(ctx *cli.Context) error {
 	setup(ctx)
 
 	go catchSignals()
-	go notify(parseRunCommands(setting.Cfg.Run.InitCmds))
+	go notify(parseRunCommands(setting.Cfg.Run.Cmds))
 
 	watchPathes := append([]string{setting.WorkDir}, setting.Cfg.Run.WatchDirs...)
 	if setting.Cfg.Run.WatchAll {

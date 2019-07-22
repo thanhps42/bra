@@ -27,7 +27,7 @@ import (
 	"github.com/Unknwon/log"
 	"github.com/urfave/cli"
 
-	"github.com/Unknwon/bra/modules/bindata"
+	"github.com/thanhps42/bra/modules/bindata"
 )
 
 var CmdInit = cli.Command{

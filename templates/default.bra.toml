@@ -1,9 +1,5 @@
 [run]
-init_cmds = [                      # Commands run in start
-  ["go", "install"],
-  ["go", "build"],
-  ["./$APP_NAME"]
-]
+dir = []
 watch_all = true                   # Watch all sub-directories
 watch_dirs = []                    # Directories to watch
 watch_exts = [".go"]               # Extensions to watch

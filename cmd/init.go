@@ -23,8 +23,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/Unknwon/com"
-	"github.com/Unknwon/log"
+	"github.com/thanhps42/com"
+	"github.com/thanhps42/log"
 	"github.com/urfave/cli"
 
 	"github.com/thanhps42/bra/modules/bindata"

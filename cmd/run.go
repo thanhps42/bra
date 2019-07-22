@@ -26,8 +26,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Unknwon/com"
-	"github.com/Unknwon/log"
+	"github.com/thanhps42/com"
+	"github.com/thanhps42/log"
 	"github.com/urfave/cli"
 	"gopkg.in/fsnotify/fsnotify.v1"
 

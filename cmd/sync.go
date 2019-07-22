@@ -22,12 +22,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Unknwon/com"
-	"github.com/Unknwon/log"
+	"github.com/thanhps42/com"
+	"github.com/thanhps42/log"
 	"github.com/urfave/cli"
 	"gopkg.in/fsnotify/fsnotify.v1"
 
-	"github.com/Unknwon/bra/modules/setting"
+	"github.com/thanhps42/bra/modules/setting"
 )
 
 var CmdSync = cli.Command{

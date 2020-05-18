@@ -36,7 +36,7 @@ func main() {
 	app.Name = "Bra"
 	app.Usage = "Brilliant Ridiculous Assistant is a command line utility tool."
 	app.Version = APP_VER
-	app.Commands = []cli.Command{
+	app.Commands = []*cli.Command{
 		cmd.CmdInit,
 		cmd.CmdRun,
 		cmd.CmdSync,

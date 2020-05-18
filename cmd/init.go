@@ -30,7 +30,7 @@ import (
 	"github.com/thanhps42/bra/modules/bindata"
 )
 
-var CmdInit = cli.Command{
+var CmdInit = &cli.Command{
 	Name:   "init",
 	Usage:  "initialize config template file",
 	Action: runInit,

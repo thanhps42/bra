@@ -43,7 +43,7 @@ var (
 	shutdown    = make(chan bool)
 )
 
-var CmdRun = cli.Command{
+var CmdRun = &cli.Command{
 	Name:   "run",
 	Usage:  "start monitoring and notifying",
 	Action: runRun,

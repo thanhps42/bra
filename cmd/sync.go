@@ -30,12 +30,12 @@ import (
 	"github.com/thanhps42/bra/modules/setting"
 )
 
-var CmdSync = cli.Command{
+var CmdSync = &cli.Command{
 	Name:   "sync",
 	Usage:  "keep syncing two end points",
 	Action: runSync,
 	Flags: []cli.Flag{
-		cli.StringFlag{Name: "mode, m", Value: "", Usage: "run mode"},
+		&cli.StringFlag{Name: "mode, m", Value: "", Usage: "run mode"},
 	},
 }
 
